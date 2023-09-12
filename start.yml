@@ -1,0 +1,13 @@
+---
+
+- name: Maak een directory op de doelhost
+  hosts: webserver
+  become: yes
+
+  tasks:
+    - name: Maak een directory
+      ansible.builtin.file:
+        path: /home/pi/charles_11092023
+        state: directory
+      become: yes
+
